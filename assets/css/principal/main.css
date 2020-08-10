@@ -1,0 +1,879 @@
+/*! HTML5 Boilerplate v8.0.0 | MIT License | https://html5boilerplate.com/ */
+
+/* main.css 2.1.0 | MIT License | https://github.com/h5bp/main.css#readme */
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+  color: #222;
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Vendor-prefixed and regular ::selection selectors cannot be combined:
+ * https://stackoverflow.com/a/16982510/7133471
+ *
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+  resize: vertical;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden,
+[hidden] {
+  display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+
+.sr-only {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  /* 1 */
+}
+
+/*
+ * Extends the .sr-only class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.sr-only.focusable:active,
+.sr-only.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  white-space: inherit;
+  width: auto;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+  visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix::before,
+.clearfix::after {
+  content: " ";
+  display: table;
+}
+
+.clearfix::after {
+  clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+  /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+  (-webkit-min-device-pixel-ratio: 1.25),
+  (min-resolution: 1.25dppx),
+  (min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+  *,
+  *::before,
+  *::after {
+    background: #fff !important;
+    color: #000 !important;
+    /* Black prints faster */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+  }
+
+  abbr[title]::after {
+    content: " (" attr(title) ")";
+  }
+
+  /*
+   * Don't show links that are fragment identifiers,
+   * or use the `javascript:` pseudo protocol
+   */
+  a[href^="#"]::after,
+  a[href^="javascript:"]::after {
+    content: "";
+  }
+
+  pre {
+    white-space: pre-wrap !important;
+  }
+
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+
+
+
+
+  /*
+   * Printing Tables:
+   * https://web.archive.org/web/20180815150934/http://css-discuss.incutio.com/wiki/Printing_Tables
+   */
+  thead {
+    display: table-header-group;
+  }
+
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
+
+
+
+
+
+
+/*/////////////////////////////*/
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;/**reset para rems--62.5%=10px de 16px*/
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+body {
+  font-family: 'Lato', sans-serif;
+  font-size: 1.6rem;
+  line-height: 2;
+}
+
+/*GLOBALES*/
+img{
+  max-width:100%;
+}
+.contenedor {
+  width: 95%;
+  max-width:120rem;
+  margin-left:auto;
+  margin-right: auto;
+}
+h1{
+  font-size:3.6rem;
+}
+h2{
+  font-size: 3.2rem;
+}
+h3{
+  font-size:2.8rem;
+}
+h4{
+  font-size:2.4rem;
+}
+
+/*UTILIDADES*/
+.seccion{
+  margin-top:2rem;
+  margin-bottom:2rem;
+
+}
+.fw-300{
+  font-weight: 300;
+}
+.centrar-texto{
+  text-align: center;
+}
+.d-block{
+  display:block!important;
+}
+.contenido-centrado{
+  max-width:80rem;
+}
+
+/*BOTONES*/
+.boton {
+  color :white;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 1.8rem;
+  padding:1rem 3rem;
+  margin-top: 3rem;
+  display:inline-block;
+  text-align:center;
+  border:none;
+  display:block;
+  flex:0 0 100%;
+}
+
+@media (min-width:76.8rem) {
+  .boton{
+      display:inline-block;
+      flex:0 0 auto;
+  }
+}
+
+
+.boton:hover{
+  cursor: pointer;
+}
+.boton-amarillo{
+  background-color: #E08709;
+
+}
+.boton-verde{
+  background-color: #71B100;
+}
+/* header */
+
+.site-header {
+  background-color: #333333;
+  padding:1rem 0 0.5rem 0;
+}
+
+.site-header.inicio {
+  background-image: url(../../img/principal/princi4.jpg);
+  background-position: center center;
+  background-size:cover;
+  height: 100vh;
+  min-height: 60rem;
+}
+.contenido-header{
+  height:100%;
+  display: flex;
+  flex-direction: column;
+  justify-content:space-between;
+  text-align: center;
+
+}
+@media (min-width:76.8rem){
+  .contenido-header{
+      text-align: left;
+  }
+}
+
+.contenido-header h1 {
+  color:#ffffff;
+  padding-bottom: 2rem;
+  max-width: 60rem;
+  line-height: 2;
+
+}
+.barra {
+  padding-top:1rem;
+}
+
+@media (min-width:76.8rem){
+  .barra {
+      display: flex;
+      justify-content: space-between;
+      align-items: right ;
+  }
+}
+
+.barrasub{
+  padding-top:0.2rem;
+}
+@media (min-width:76.8rem){
+  .barrasub{
+      display: flex;
+      justify-content: space-between;
+      align-items: center ;
+  }
+}
+/*navegación*/
+.navegacion a {
+  color :white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  display:block;
+}
+@media (min-width:76.8rem){
+  .navegacion a{
+      display: inline-block;
+      font-size: 1.8rem;
+      margin-right: 2rem;
+  }
+  .navegacion a:last-of-type{
+      margin: 0;
+  }
+}
+
+
+.navegacion a:hover {
+  color: #71b100;
+}
+/** ICONOS NOSTROS*/
+@media (min-width: 76.8rem){
+  .iconos-nosotros{
+      display:flex;
+      justify-content:space-between;
+  }
+}
+
+.icono{
+  text-align: center;
+}
+@media (min-width: 76.8rem){
+  .icono{
+      flex-basis: calc(33.3% - 1rem);
+  }
+}
+.icono h3{
+  text-transform: uppercase;
+}
+
+/*ANUNCIOS*/
+@media (min-width:76.8rem){
+  .contenedor-anuncios{
+      display:flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+  }
+}
+
+.anuncio{
+  /*flex-grow:0;
+  flex-shrink:0;
+  flex-basis:calc(33.3% - 1rem);*/
+  border:1px solid #B5B5B5;
+  background-color:#F5F5F5;
+  margin-bottom: 2rem;
+   /* border-style: solid;
+  border-color:#B5B5B5;
+  border-width: 1px;*/
+}
+@media (min-width:76.8rem){
+  .anuncio{
+      flex: 0 0 calc(33.3% - 1rem);
+      /*flex-grow:0;
+      flex-shrink:0;
+      flex-basis:calc(33.3% - 1rem);*/
+      /*border:1px solid #B5B5B5;
+      background-color:#F5F5F5;
+      margin-bottom: 2rem;
+       /* border-style: solid;
+      border-color:#B5B5B5;
+      border-width: 1px;*/
+  }
+}
+.contenido-anuncio{
+  padding:2rem;
+}
+.contenido-anuncio h3,.contenido-anuncio p{
+  margin:0;
+}
+.precio{
+  color:#71B100;
+  font-weight: 700;
+}
+.iconos-caracteristicas{
+  list-style: none;
+  padding:0;
+  display:flex;
+  justify-content: space-evenly;
+  flex:1;
+  max-width:50rem;
+
+}
+.iconos-caracteristicas li{
+  /*flex:1;*/
+  display:flex;
+}
+.iconos-caracteristicas li img{
+  margin-right: 2rem;
+}
+.ver-todas{
+  display:flex;
+  justify-content: flex-end;
+}
+
+
+/*CONTACTO HOME*/
+.imagen-contacto{
+  background-image: url(../../img/principal/encuentra.jpg);
+  background-position: center center;
+  height: 40rem;
+  background-size: cover;
+  display:flex;
+  align-items: center;
+}
+.contenido-contacto{
+  flex:0 0 95%;
+  color:#ffffff;
+}
+.contenido-contacto p{
+  font-size: 1.8rem;
+}
+
+/*SECCION INFERIOR*/
+
+@media (min-width:76.8rem){
+  .seccion-inferior {
+      display:flex;
+      justify-content: space-between;
+  }
+  .seccion-inferior .blog{
+      flex-basis: 60%;
+  }
+  .seccion-inferior .testimoniales {
+      flex-basis: calc(40% - 2rem);
+  }
+}
+
+
+.entrada-blog {
+  margin-bottom:2rem;
+}
+@media (min-width:76.8rem){
+  .entrada-blog {
+      display:flex;
+      justify-content:space-between;
+
+  }
+}
+.entrada-blog :last-of-type{
+  margin-bottom: 0;
+}
+
+@media (min-width:76.8rem){
+  .entrada-blog .imagen{
+      flex-basis: 40%;
+  }
+  .entrada-blog .texto-entrada{
+      flex-basis: calc(60% - 3rem);
+  }
+}
+
+.texto-entrada a {
+  color:#000000;
+  text-decoration: none;
+}
+.texto-entrada h4{
+  margin: 0;
+  line-height: 1.4;
+}
+
+
+
+
+.texto-entrada h4::after{
+  content:'';
+  display:block;
+  width: 15rem;
+  height: 0.5rem;
+  background-color: #71B100;
+  margin-top: 1rem;
+}
+.texto-entrada span {
+  color: #E08709;
+}
+
+/*testimoniales*/
+.testimonial {
+  background-color:#71B100;
+  font-size: 2.4rem;
+  padding: 2rem;
+  color:#ffffff;
+  border-radius: 2rem;
+
+}
+.testimonial p{
+  text-align: right;
+}
+.testimonial blockquote::before{
+  content: '';
+  background-image: url(../../img/principal/comilla.svg);
+  width: 4rem;
+  height: 4rem;
+  top: 0;
+  left: -2rem;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+}
+.testimonial blockquote {
+  position: relative;
+  padding-left:5rem;
+  font-weight:300;
+}
+
+
+/*FOOTER*/
+.site-footer{
+  background-color:#333333 ;
+  margin:0;
+}
+.contenedor-footer{
+  padding: 3rem 0;
+  text-align: center;
+}
+@media (min-width:76.8rem){
+  .contenedor-footer{
+      display:flex;
+      justify-content: space-between;
+
+  }
+}
+.copyright{
+  margin:0;
+  color:#ffffff;
+}
+
+
+
+
+
+/**INTERNAS*/
+/*NOSOTROS*/
+
+@media (min-width:76.8rem){
+  .contenido-nosotros {
+      display:grid;
+      grid-template-columns: repeat(2,1fr);
+      grid-column-gap:2rem;
+  }
+}
+
+.texto-nosotros blockquote{
+  font-weight: 900;
+  font-size: 2rem;
+  margin:0;
+  padding:1rem 0 3rem 0;
+}
+
+/*ANUNCIO*/
+
+.resumen-propiedad  {
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/*CONTACTO*/
+.contacto p{
+  font-size:1.4rem;
+  color: #4f4f4f;
+  margin:2 0 0 0;
+
+}
+legend{
+  font-size: 2rem;
+  color: #4f4f4f;
+
+}
+
+label{
+  display:block;
+  color:#000000;
+  font-size:1.7rem;
+
+}
+/*input[type="text"],input[type="email"]*/
+input:not([type="submit"]),textarea,select{
+  padding: .5rem;
+  display: block;
+  width: 100%;
+  background-color: #e1e1e1;
+  margin-bottom: 2rem;
+  border:none;
+  border-radius: 1rem;
+
+}
+input[type="radio"]{
+  width: auto;
+  margin:0;
+}
+select{
+  -webkit-appearance: none;
+  appearance: none;
+}
+textarea{
+  height: 20rem;
+}
+
+.forma-contacto{
+  max-width: 30rem;
+  display:flex;
+  justify-content:space-between;
+  align-items: center;
+}
+
+/* LOGIN*/
+.login {
+  background-image: url(../../img/principal/loginfound.jpg);
+  background-position: center center;
+  background-size:cover;
+  height: 100vh;
+  min-height: 60rem;
+  min-height: 60rem;
+  display: flex;
+  flex-direction: column;
+  justify-content:space-between;
+  text-align: center;
+  height: 100%;
+
+
+}
+.contenido-centrado-login{
+  max-width:35rem;
+}
+.form-login{
+  background-color:#4f4f4f;
+  padding: 3rem;
+  border-radius: 1.5rem;
+}
+.fw-300-l{
+  font-weight: 800;
+}
+.centrar-texto-l{
+  text-align: center;
+  color: #ffffffff;
+
+}
+.form-login label{
+  color: #ffffff;
+}
+.form-login a {
+  color: aqua;
+}
+
+video{
+
+/*  display:flex;
+  justify-content:space-around;*/
+  width: 100%;
+  /*max-width:120rem;*/
+  margin-left:1rem;
+  margin-right:1rem;
+  margin-top:1rem;
+  background-position: center center;
+  background-size:cover;
+  height: 100vh;
+  max-height:50rem;
+}
+embed{
+
+  /*  display:flex;
+    justify-content:space-around;*/
+    width: 50%;
+    /*max-width:120rem;*/
+    margin-left:50rem;
+    margin-right:1rem;
+    margin-top:1rem;
+    background-position: center center;
+    background-size:cover;
+    height: 100vh;
+    max-height:50rem;
+  }
+contenido-video{
+
+}
+section.programa {
+  position: relative;
+}
+div.contenedor-video2{
+  max-width: 100%;
+
+  overflow-x: hidden;
+}
+div.contenedor-video2 video{
+position: absolute ;
+
+display: flex;
+justify-content: space-around;
+width: 100%;
+height: 100%;
+margin-left:0%;
+margin-right: 5%;
+
+
+}
+div.contenido-programa{
+  margin-top: 20rem;
+  position: relative;
+  top:0;
+  left:0;
+  height: 100%;
+  width: 100%;
+
+}
+div.contenedor-video2 video{
+  width: 100%;
+  height: 100%;
+
+}
+
+.inicio2 {
+  background-image: url(../../img/principal/regitrarse5.jpg);
+  background-position: center center;
+  background-size:auto;
+  height: 100%;
+  witdh:100%;
+  min-height: 100rem;
+}
+
+.contacto2 {
+
+  font-size:1.4rem;
+  color: #4f4f4f;
+  margin:2 0 0 0;
+
+}
+.contacto2 p{
+  font-size:1.4rem;
+  color: #4f4f4f;
+  margin:2 0 0 0;
+  color:black;
+
+
+}
+
+.contacto label{
+	color: black;
+}
+
+.fw-3002{
+  font-weight: 400;
+  color:black;
+  
+}
+.rel {
+	margin-botton=2rem;
+}
