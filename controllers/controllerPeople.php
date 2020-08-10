@@ -23,7 +23,7 @@ if(isset($_SERVER['REQUEST_METHOD'])){
              * si el user no existe redirigimos al index
              */
             header("location:http://localhost/plantilla/login.php");
-        }else if($obj->is_user=='3'){
+        }else if($obj->is_user=='1'){
 
             /**
              * usamos el objeto que nos retorna
@@ -43,7 +43,7 @@ if(isset($_SERVER['REQUEST_METHOD'])){
              */
             header("location:http://localhost/plantilla/");
       
-        }else if($obj->is_user=='1'){
+        }else if($obj->is_user=='3'){
 
             /**
              * NOTA:::::----FALTA

@@ -5,7 +5,7 @@
 session_start();
 if(!isset($_SESSION['name'])){
     header("location:http://localhost/plantilla/");
-}else if($_SESSION['rol']!='3'){
+}else if($_SESSION['rol']!='1'){
     header("location:http://localhost/plantilla/login.php");
 }
 ?>
