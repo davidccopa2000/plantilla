@@ -46,7 +46,7 @@ if(isset($_SERVER['REQUEST_METHOD'])){
         }else if($obj->is_user=='3'){
 
             /**
-             * NOTA:::::----FALTA
+             * NOTA:::::----FALTA  ojito
              * configurar segun usuario
              */
             header("location:http://localhost/plantilla/");
